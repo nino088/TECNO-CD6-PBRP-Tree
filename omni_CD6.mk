@@ -46,3 +46,12 @@ TARGET_SCREEN_HEIGHT := 1600
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=CD6-OP \
     PRODUCT_DEVICE=TECNO-CD6
+
+# Additional Libraries
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymaster4 \
+    libpuresoftkeymasterdevice
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
